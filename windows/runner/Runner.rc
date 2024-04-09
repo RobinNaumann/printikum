@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
+            VALUE "CompanyName", "robbb.in" "\0"
             VALUE "FileDescription", "printikum" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "printikum" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 Robin Naumann. All rights reserved." "\0"
             VALUE "OriginalFilename", "printikum.exe" "\0"
             VALUE "ProductName", "printikum" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
