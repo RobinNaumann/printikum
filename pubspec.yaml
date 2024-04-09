@@ -62,7 +62,7 @@ flutter_launcher_icons:
     icon_size: 48 
   macos:
     generate: true
-    image_path: "icon.png"
+    image_path: "icon_macos.png"
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
