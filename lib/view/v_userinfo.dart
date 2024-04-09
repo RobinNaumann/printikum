@@ -4,8 +4,7 @@ import 'package:printikum/bit/b_userinfo.dart';
 import 'package:printikum/main.dart';
 
 class UserInfoView extends StatelessWidget {
-  final String username;
-  const UserInfoView({super.key, required this.username});
+  const UserInfoView({super.key});
 
   @override
   Widget build(BuildContext context) {

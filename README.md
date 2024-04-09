@@ -1,16 +1,28 @@
 # printikum
 
-A new Flutter project.
+a simple utility for printing at the ikum in Hamburg
 
-## Getting Started
+## Features
+- User-friendly interface for easy document selection and printing
+- Support for various file formats, including PDF, and images
+- view your current quota balance
+- works from any network
 
-This project is a starting point for a Flutter application.
+## Screenshots
+![](./screenshot/screenshot_1.png)
+![](./screenshot/screenshot_2.png)
+![](./screenshot/screenshot_3.png)
+![](./screenshot/screenshot_4.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+- download the app for your platform [here](https://apps.robbb.in/printikum) 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Contributing
+Contributions are welcome! If you'd like to contribute to printikum (or have an idea), just send me a message
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+For any inquiries or support, please send me a message or an email
+Yours, Robin

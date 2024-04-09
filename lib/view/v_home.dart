@@ -71,8 +71,7 @@ class HomePage extends StatelessWidget {
                               children: [
                                 AnimatedSize(
                                     duration: Duration(milliseconds: 300),
-                                    child: UserInfoView(
-                                        username: config.user?.username ?? "")),
+                                    child: UserInfoView()),
                                 _printerView(context, config.printer),
                                 _fileView(context, config.file)
                               ].spaced(),
