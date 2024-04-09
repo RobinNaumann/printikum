@@ -11,23 +11,24 @@ platforms:
   - Windows
   - Linux
 tagline: no-setup printing utility at the ikum
-about: >
-  printikum is a no-setup printing utility for the ikum. It allows you to print documents from your computer to the printers at the ikum. It is a simple and easy-to-use tool that is available for macOS, Windows, and Linux.
-  There is no need to install any drivers, join specific networks or configure anything. Just download the app, select the printer, and print your document.
+about: |
+  printikum is a no-setup printing utility for the ikum. It allows you to print documents from your computer to the printers at the ikum. It is a simple and easy-to-use tool that is available for macOS, Windows, and Linux. There is no need to install any drivers, join specific networks or configure anything. Just download the app, select the printer, and print your document.
+  
+  If you have any questions or feedback, feel free to contact me via email (robin.naumann@studium...) or on GitHub.
 icon: https://raw.githubusercontent.com/RobinNaumann/printikum/main/icon.png
 source: https://github.com/RobinNaumann/printikum
 donate: https://www.buymeacoffee.com/robinnaumann
 screenshots:
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/screenshot_1.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/screenshot_2.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/screenshot_3.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/screenshot_4.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc1.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc2.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc3.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc4.png
 releases: 
   - version: 0.2.3
     downloads:
       - platform: macOS
-        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum.app.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.3/printikum.app.zip
       - platform: Windows
-        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum_windows.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.3/printikum-windows.zip
       - platform: Linux
-        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum_linux.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.3/printikum-linux.zip
