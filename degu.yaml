@@ -10,10 +10,10 @@ platforms:
   - macOS
   - Windows
   - Linux
-tagline: no-setup printing utility at the ikum
+  - Android
+tagline: no-setup printing utility for the ikum
 about: |
-  printikum is a no-setup printing utility for the ikum. It allows you to print documents from your computer to the printers at the ikum. It is a simple and easy-to-use tool that is available for macOS, Windows, and Linux. There is no need to install any drivers, join specific networks or configure anything. Just download the app, select the printer, and print your document.
-  
+  printikum is a no-setup printing utility for the ikum. It allows you to print documents from your device to the printers at the ikum without joining specific networks or installing drivers. 
   If you have any questions or feedback, feel free to contact me via email (robin.naumann@studium...) or on GitHub.
 icon: https://raw.githubusercontent.com/RobinNaumann/printikum/main/icon.png
 source: https://github.com/RobinNaumann/printikum
@@ -26,6 +26,8 @@ screenshots:
 releases: 
   - version: 0.2.3
     downloads:
+      - platform: Android
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.3/printikum-android.apk
       - platform: macOS
         url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.3/printikum.app.zip
       - platform: Windows

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:desktop_window/desktop_window.dart';
 import 'package:elbe/elbe.dart';
 import 'package:moewe/moewe.dart';
@@ -15,7 +17,11 @@ void main() async {
       project: "e28c2dbe5317562a",
       appId: "7r39kdk2ifk2n2e",
       appVersion: appConfig.about.version);
-  await DesktopWindow.setWindowSize(Size(430, 500));
+
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    await DesktopWindow.setWindowSize(Size(430, 500));
+  }
+
   runApp(const MyApp());
 }
 
