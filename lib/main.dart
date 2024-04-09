@@ -15,7 +15,6 @@ void main() async {
       project: "e28c2dbe5317562a",
       appId: "7r39kdk2ifk2n2e",
       appVersion: appConfig.about.version);
-
   await DesktopWindow.setWindowSize(Size(430, 500));
   runApp(const MyApp());
 }

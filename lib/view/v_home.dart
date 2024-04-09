@@ -1,4 +1,5 @@
 import 'package:elbe/elbe.dart';
+import 'package:moewe/moewe.dart';
 import 'package:printikum/bit/b_config.dart';
 import 'package:printikum/bit/b_userinfo.dart';
 import 'package:printikum/main.dart';
@@ -101,9 +102,11 @@ class _PrintBtnState extends State<PrintBtn> {
           .printFile(config.user!, config.printer!.id, config.file!.path);
       setState(() => msg = "✓ sent to printer");
       context.bit<ConfigBit>().setFile(null);
+      Moewe.i.event("print_success", {"printer": config.printer!.id});
     } catch (e) {
       log.d(this, "print failed", e);
       setState(() => msg = "print failed");
+      Moewe.i.event("print_failure", {"printer": config.printer!.id});
     }
   }
 
