@@ -1,3 +1,10 @@
+name: 'Link Checker: All English'
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   windows:
     runs-on: windows-latest
