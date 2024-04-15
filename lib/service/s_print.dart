@@ -16,6 +16,10 @@ import 'package:printikum/routes.dart';
   int? get valInt => int.tryParse(val ?? '');
 }*/
 
+extension MaybeList<T> on List<T> {
+  T? maybe(int id) => id < length ? this[id] : null;
+}
+
 class UserInfo extends DataModel {
   final int? balance;
   final int? printed;
@@ -39,9 +43,9 @@ class AuthUser extends DataModel {
 class Printer extends DataModel {
   final String id;
   final bool accepting;
-  final int entries;
+  final int? entries;
   // the price per page in cents
-  final int price;
+  final int? price;
 
   RichPrinterData? get richData => RichPrinterData.tryParse(id);
 
@@ -129,9 +133,9 @@ class PrinterService {
         .lastOrNull;
 
     return UserInfo(
-        balance: balStr != null ? int.parse(balStr) : null,
+        balance: balStr != null ? int.tryParse(balStr) : null,
         printed: printedRow != null
-            ? int.parse(printedRow.querySelectorAll("td")[1].text)
+            ? int.tryParse(printedRow.querySelectorAll("td")[1].text)
             : null);
   }
 
@@ -145,16 +149,25 @@ class PrinterService {
 
     final printers = rows.skip(1).map((e) {
       final cols = e.querySelectorAll("td");
-      return Printer(
-          id: cols[0].innerHtml.trim(),
-          accepting: cols[1].innerHtml.toLowerCase().trim() == "enabled" &&
-              cols[2].innerHtml.toLowerCase().trim() == "enabled",
-          entries: int.parse(cols[3].innerHtml.trim()),
-          price: int.parse(
-              cols[4].innerHtml.replaceAll("€", "").replaceAll(".", "")));
+      try {
+        return Printer(
+            id: cols[0].innerHtml.trim(),
+            accepting: cols[1].innerHtml.toLowerCase().trim() == "enabled" &&
+                cols[2].innerHtml.toLowerCase().trim() == "enabled",
+            entries: int.tryParse(cols.maybe(3)?.innerHtml.trim() ?? "/"),
+            price: int.tryParse(cols
+                    .maybe(4)
+                    ?.innerHtml
+                    .replaceAll("€", "")
+                    .replaceAll(".", "") ??
+                "/"));
+      } catch (_) {
+        log.d(this, "could not parse a printer");
+        return null;
+      }
     });
 
-    return printers.toList();
+    return printers.whereNotNull().toList();
   }
 
   Future<String> _exec(AuthUser user, String cmd) async {

@@ -144,18 +144,19 @@ class PrinterView extends StatelessWidget {
   final Printer printer;
   const PrinterView({super.key, required this.printer});
 
-  Widget priceView(int price) {
-    return Text.bodyS("$price ct. / page");
+  Widget priceView(int? price) {
+    return Text.bodyS(price != null ? "unknown cost" : "$price ct. / page");
   }
 
-  Widget acceptingChip(bool accepting, int count) {
+  Widget acceptingChip(bool accepting, int? count) {
     return Box(
         style: accepting
             ? ColorStyles.minorAlertSuccess
             : ColorStyles.minorAlertInfo,
         border: Border(borderRadius: BorderRadius.circular(10)),
         padding: RemInsets.symmetric(horizontal: 0.5, vertical: 0.3),
-        child: Text.bodyS(accepting ? 'running ($count)' : 'not available'));
+        child: Text.bodyS(
+            accepting ? 'running (${count ?? "-"})' : 'not available'));
   }
 
   Widget title(Printer d) {

@@ -1,0 +1,57 @@
+
+const initialFiles = [
+  KFile("style.css", """
+.kind-content .heading{
+  color:teal;
+}
+
+.kind-content img{
+    max-height: 100%;
+}
+"""),
+  KFile("refs.bib", """
+@book{raupe,
+  title={Die kleine Raupe Nimmersatt},
+  author={Carle, Eric and Christen, Viktor},
+  year={1969},
+  publisher={Stalling}
+}
+"""),
+  KFile("base.kind", """
+->: ->
+-*: none
+
+hello: string => '<div style="display: inline-block; border-left: 0.25rem solid #4444DD; color: white; background-color: #4444DD44; color:#4444DD; padding: 0.2rem 0.5rem">hello <b>\$1</b></div>'
+column: int data => '<div class="columns" style="column-count: \$1">\$2</div>'
+icon: string => '<span class="icon_inline icon-\$1"></span>'
+
+style: string data => '<span style="display: inline-block; \$1">\$2</span>'
+
+a: data => '(\$1)'
+
+img: string => '<img src="\$1"/>'
+"""),
+  KFile("main.kind", """
+use: style.css
+use: refs.bib
+use: base.kind
+
+@myself:
+    title: "A Comprehensive Guide to Everything"
+    author: "Robin"
+
+- hello *how* are you doing?
+    - demo_data: 
+        - this is the flag of Hamburg:
+          \\\\ :style "width: 30%" :img "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_Hamburg.svg"
+        - cite your *sources*! @raupe @myself
+        - formatting makes text easier to read
+          -> use custom widgets: :hello Friend or icons :icon apple
+        - math is also sometimes needed
+          + use basic formatting in text: X_{own} + Y^2 
+          + or TeX formulas \$x^2 + y^2 = z^2\$
+        -* :column 
+            * 2 
+            * This is a custom column function. how are we doing? i don't even and this is just some content so we can known how to wrap this know but I feel like, this should already have wrapped
+        
+"""),
