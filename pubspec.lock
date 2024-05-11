@@ -323,10 +323,11 @@ packages:
   moewe:
     dependency: "direct main"
     description:
-      path: "../moewe_dart/moewe"
-      relative: true
-    source: path
-    version: "0.1.5"
+      name: moewe
+      sha256: ebc3e7e8154c38dad5ceb81f267f2d3259325a5d969adee5d88e3afc50ecda4c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.6"
   package_info_plus:
     dependency: transitive
     description:
