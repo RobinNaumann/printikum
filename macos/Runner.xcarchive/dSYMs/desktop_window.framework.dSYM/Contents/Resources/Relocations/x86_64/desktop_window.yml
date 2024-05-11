@@ -1,0 +1,28 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/robin/Library/Developer/Xcode/DerivedData/Runner-fwojwvikmgroiifvlhsnpbaigxxh/Build/Intermediates.noindex/ArchiveIntermediates/Runner/IntermediateBuildFilesPath/UninstalledProducts/macosx/desktop_window.framework/Versions/A/desktop_window'
+relocations:
+  - { offsetInCU: 0x34, offset: 0xC9385, size: 0x8, addend: 0x0, symName: _desktop_windowVersionString, symObjAddr: 0x0, symBinAddr: 0x73A0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0xC93BA, size: 0x8, addend: 0x0, symName: _desktop_windowVersionNumber, symObjAddr: 0x30, symBinAddr: 0x73D0, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0xC93F7, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC8register4withySo07FlutterE9Registrar_p_tFZ', symObjAddr: 0x0, symBinAddr: 0x1B60, symSize: 0xE0 }
+  - { offsetInCU: 0xD4, offset: 0xC94A4, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC8register4withySo07FlutterE9Registrar_p_tFZTo', symObjAddr: 0x120, symBinAddr: 0x1C80, symSize: 0xF0 }
+  - { offsetInCU: 0x19B, offset: 0xC956B, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctFTo', symObjAddr: 0x14F0, symBinAddr: 0x3050, symSize: 0x80 }
+  - { offsetInCU: 0x1E3, offset: 0xC95B3, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginCACycfcTo', symObjAddr: 0x15A0, symBinAddr: 0x3100, symSize: 0x30 }
+  - { offsetInCU: 0x236, offset: 0xC9606, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF015$syXlSgIeyBy_ypM7Iegn_TRyXlSgIeyBy_Tf1ncn_nTf4ndg_n', symObjAddr: 0x17B0, symBinAddr: 0x3310, symSize: 0x14E0 }
+  - { offsetInCU: 0x671, offset: 0xC9A41, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginCMa', symObjAddr: 0x100, symBinAddr: 0x1C60, symSize: 0x20 }
+  - { offsetInCU: 0x6FA, offset: 0xC9ACA, size: 0x8, addend: 0x0, symName: '_$sSo8NSObjectCMa', symObjAddr: 0x1450, symBinAddr: 0x2FB0, symSize: 0x30 }
+  - { offsetInCU: 0x70E, offset: 0xC9ADE, size: 0x8, addend: 0x0, symName: '_$sypSgWOh', symObjAddr: 0x1480, symBinAddr: 0x2FE0, symSize: 0x30 }
+  - { offsetInCU: 0x722, offset: 0xC9AF2, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x14B0, symBinAddr: 0x3010, symSize: 0x40 }
+  - { offsetInCU: 0x736, offset: 0xC9B06, size: 0x8, addend: 0x0, symName: '_$sypSgWOb', symObjAddr: 0x1600, symBinAddr: 0x3160, symSize: 0x40 }
+  - { offsetInCU: 0x77F, offset: 0xC9B4F, size: 0x8, addend: 0x0, symName: '_$sypWOc', symObjAddr: 0x16A0, symBinAddr: 0x3200, symSize: 0x30 }
+  - { offsetInCU: 0x7C3, offset: 0xC9B93, size: 0x8, addend: 0x0, symName: '_$sypSgWOc', symObjAddr: 0x2C90, symBinAddr: 0x47F0, symSize: 0x40 }
+  - { offsetInCU: 0x7D7, offset: 0xC9BA7, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_0, symObjAddr: 0x2CD0, symBinAddr: 0x4830, symSize: 0x30 }
+  - { offsetInCU: 0x7EB, offset: 0xC9BBB, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_0, symObjAddr: 0x2D00, symBinAddr: 0x4860, symSize: 0x22 }
+  - { offsetInCU: 0xA18, offset: 0xC9DE8, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC8register4withySo07FlutterE9Registrar_p_tFZ', symObjAddr: 0x0, symBinAddr: 0x1B60, symSize: 0xE0 }
+  - { offsetInCU: 0xA9C, offset: 0xC9E6C, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginCACycfC', symObjAddr: 0xE0, symBinAddr: 0x1C40, symSize: 0x20 }
+  - { offsetInCU: 0xB3B, offset: 0xC9F0B, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF', symObjAddr: 0x210, symBinAddr: 0x1D70, symSize: 0x1240 }
+  - { offsetInCU: 0xF75, offset: 0xCA345, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginCACycfc', symObjAddr: 0x1570, symBinAddr: 0x30D0, symSize: 0x30 }
+  - { offsetInCU: 0xFA6, offset: 0xCA376, size: 0x8, addend: 0x0, symName: '_$s14desktop_window19DesktopWindowPluginCfD', symObjAddr: 0x15D0, symBinAddr: 0x3130, symSize: 0x30 }
+  - { offsetInCU: 0xFD7, offset: 0xCA3A7, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5', symObjAddr: 0x1640, symBinAddr: 0x31A0, symSize: 0x60 }
+  - { offsetInCU: 0x1015, offset: 0xCA3E5, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tg5', symObjAddr: 0x16D0, symBinAddr: 0x3230, symSize: 0xE0 }
+...

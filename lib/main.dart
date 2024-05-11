@@ -12,16 +12,19 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // setup Moewe for crash logging
-  Moewe(
-      host: "moewe.robbb.in",
-      project: "e28c2dbe5317562a",
-      appId: "7r39kdk2ifk2n2e",
-      appVersion: appConfig.about.version);
+  await Moewe(
+    host: "moewe.robbb.in",
+    project: "dfdd2bd2f290bd2c",
+    app: "24522f9264034f4d",
+    appVersion: appConfig.about.version,
+    buildNumber: appConfig.about.buildNumber,
+  ).init();
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
     await DesktopWindow.setWindowSize(Size(430, 500));
   }
 
+  moewe.events.appOpen();
   runApp(const MyApp());
 }
 

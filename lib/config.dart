@@ -6,6 +6,7 @@ const appConfig = (
   about: (
     name: "printikum",
     version: "0.2.4",
+    buildNumber: 4,
     author: "Robin Naumann",
     homepage: "https://apps.robbb.in/printikum",
     source: "https://github.com/RobinNaumann/printikum",

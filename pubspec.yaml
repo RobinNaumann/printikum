@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 0.2.3+2
+version: 0.2.6+4
 
 environment:
   sdk: '>=3.1.4 <4.0.0'
@@ -42,8 +42,9 @@ dependencies:
   file_picker: ^7.0.2
   url_launcher: ^6.2.4
   desktop_window: ^0.4.0
-  moewe:
-    git: https://github.com/RobinNaumann/moewe_dart.git
+  #moewe: ^0.1.5
+  moewe: 
+    path: ../moewe_dart/moewe
 
 dev_dependencies:
   flutter_test:

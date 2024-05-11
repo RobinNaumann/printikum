@@ -17,6 +17,13 @@ a simple utility for printing at the ikum in Hamburg
 ## Installation
 - download the app for your platform [here](https://apps.robbb.in/printikum) 
 
+#### building
+- **macOS**
+    1. `flutter build macos`
+    2. `open macos/Runner.xcworkspace`
+    3. set signing to `development`
+    4. select `Product` > `Archive`
+
 ## Contributing
 Contributions are welcome! If you'd like to contribute to printikum (or have an idea), just send me a message
 

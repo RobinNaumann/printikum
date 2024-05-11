@@ -102,11 +102,11 @@ class _PrintBtnState extends State<PrintBtn> {
           .printFile(config.user!, config.printer!.id, config.file!.path);
       setState(() => msg = "✓ sent to printer");
       context.bit<ConfigBit>().setFile(null);
-      Moewe.i.event("print_success", {"printer": config.printer!.id});
+      moewe.event("print_success", data: {"printer": config.printer!.id});
     } catch (e) {
       log.d(this, "print failed", e);
       setState(() => msg = "print failed");
-      Moewe.i.event("print_failure", {"printer": config.printer!.id});
+      moewe.event("print_failure", data: {"printer": config.printer!.id});
     }
   }
 

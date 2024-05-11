@@ -8,7 +8,6 @@ class UserInfoView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(key);
     return ConfigBit.builder(onData: (bit, config) {
       return Row(
           children: [

@@ -3,12 +3,11 @@ import 'dart:io';
 
 import 'package:dartssh2/dartssh2.dart';
 import 'package:elbe/elbe.dart';
-import 'package:elbe/util/json_tools.dart';
 import 'package:elbe/util/m_data.dart';
 import 'package:html/parser.dart' as html;
+import 'package:moewe/moewe.dart';
 import 'package:printikum/config.dart';
 import 'package:printikum/main.dart';
-import 'package:printikum/routes.dart';
 
 /*extension SimpleElement on Element {
   String? get text => innerHtml?.trim();
@@ -102,8 +101,8 @@ class PrinterService {
   Future<void> login(AuthUser user) async {
     const msg = "printikum";
     final p = await _exec(user, 'echo $msg');
-    print("'$p'");
     if (p != msg) throw Exception("login failed");
+    moewe.events.login(method: "informatik");
   }
 
   Future<void> printFile(AuthUser user, String printer, String path) async {
@@ -159,7 +158,8 @@ class PrinterService {
                     .maybe(4)
                     ?.innerHtml
                     .replaceAll("€", "")
-                    .replaceAll(".", "") ??
+                    .replaceAll(".", "")
+                    .trim() ??
                 "/"));
       } catch (_) {
         log.d(this, "could not parse a printer");
@@ -171,7 +171,6 @@ class PrinterService {
   }
 
   Future<String> _exec(AuthUser user, String cmd) async {
-    print(user);
     final client = SSHClient(
         await SSHSocket.connect(appConfig.server.host, appConfig.server.port),
         username: user.username,

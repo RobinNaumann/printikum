@@ -145,7 +145,7 @@ class PrinterView extends StatelessWidget {
   const PrinterView({super.key, required this.printer});
 
   Widget priceView(int? price) {
-    return Text.bodyS(price != null ? "unknown cost" : "$price ct. / page");
+    return Text.bodyS(price == null ? "unknown cost" : "$price ct. / page");
   }
 
   Widget acceptingChip(bool accepting, int? count) {

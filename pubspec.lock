@@ -323,12 +323,10 @@ packages:
   moewe:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "35ea7faba2dde590d922105f250e649ec903f538"
-      url: "https://github.com/RobinNaumann/moewe_dart.git"
-    source: git
-    version: "1.0.0"
+      path: "../moewe_dart/moewe"
+      relative: true
+    source: path
+    version: "0.1.5"
   package_info_plus:
     dependency: transitive
     description:
