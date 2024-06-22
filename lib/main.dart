@@ -1,23 +1,25 @@
 import 'dart:io';
 
 import 'package:desktop_window/desktop_window.dart';
+import 'package:elbe/bit/bit/bit.dart';
 import 'package:elbe/elbe.dart';
 import 'package:moewe/moewe.dart';
 import 'package:printikum/bit/b_config.dart';
-import 'package:printikum/config.dart';
 import 'package:printikum/routes.dart';
 
 void main() async {
   LoggerService.init(ConsoleLoggerService());
   WidgetsFlutterBinding.ensureInitialized();
+  final packageInfo =
+      await maybeOr(() async => await PackageInfo.fromPlatform(), null);
 
   // setup Moewe for crash logging
   await Moewe(
     host: "moewe.robbb.in",
     project: "dfdd2bd2f290bd2c",
     app: "24522f9264034f4d",
-    appVersion: appConfig.about.version,
-    buildNumber: appConfig.about.buildNumber,
+    appVersion: packageInfo?.version ?? "0.0.0",
+    buildNumber: int.tryParse(packageInfo?.buildNumber ?? "0") ?? 0,
   ).init();
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {

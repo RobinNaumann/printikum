@@ -1,9 +1,8 @@
 import 'package:elbe/elbe.dart';
+import 'package:flutter/material.dart' as m;
 import 'package:moewe/moewe.dart';
 import 'package:printikum/bit/b_config.dart';
 import 'package:printikum/config.dart';
-import 'package:printikum/routes.dart';
-import 'package:flutter/material.dart' as m;
 import 'package:printikum/service/s_print.dart';
 import 'package:printikum/view/v_home.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -163,7 +162,7 @@ class AboutSection extends StatelessWidget {
                   launchUrlString(appConfig.about.source);
                 })),
       ]),
-      Text.bodyS("v${appConfig.about.version} by ${appConfig.about.author}",
+      Text.bodyS("v${moewe.appVersion} by ${appConfig.about.author}",
           color: Colors.grey)
     ].spaced());
   }

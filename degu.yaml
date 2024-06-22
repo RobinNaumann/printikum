@@ -3,10 +3,10 @@
 # for a usecase, check out apps.robbb.in
 
 name: printikum
-authors: 
+authors:
   - ref: https://gist.githubusercontent.com/RobinNaumann/7d9d5b8902a697cda1f0ba2c5b7234c6/raw/46ebed8489de7e4458335ae434fee986d594504b/robin.degu.yaml
     role: developer
-platforms: 
+platforms:
   - macOS
   - Windows
   - Linux
@@ -23,7 +23,18 @@ screenshots:
   - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc2.png
   - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc3.png
   - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc4.png
-releases: 
+releases:
+  - version: 0.2.7
+    downloads:
+      - platform: Android
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-android.apk
+      - platform: macOS
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum.app.zip
+      - platform: Windows
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-windows.zip
+      - platform: Linux
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-linux.zip
+
   - version: 0.2.6
     downloads:
       - platform: Android

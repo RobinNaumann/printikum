@@ -1,11 +1,11 @@
 name: printikum
 description: a client for printing at the ikum
-publish_to: 'none' 
+publish_to: "none"
 
-version: 0.2.6+4
+version: 0.2.7+5
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: ">=3.1.4 <4.0.0"
 
 dependencies:
   flutter:
@@ -29,12 +29,12 @@ flutter_launcher_icons:
   android: "launcher_icon"
   #ios: true
   image_path: "icon.png"
-  min_sdk_android: 21 
-  
+  min_sdk_android: 21
+
   windows:
     generate: true
     image_path: "icon.png"
-    icon_size: 48 
+    icon_size: 48
   macos:
     generate: true
     image_path: "icon_macos.png"
