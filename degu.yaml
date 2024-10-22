@@ -24,16 +24,16 @@ screenshots:
   - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc3.png
   - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc4.png
 releases:
-  - version: 0.2.7
+  - version: 0.2.8
     downloads:
       - platform: Android
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-android.apk
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-android.apk
       - platform: macOS
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum.app.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum.app.zip
       - platform: Windows
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-windows.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-windows.zip
       - platform: Linux
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.7/printikum-linux.zip
+        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-linux.zip
 
   - version: 0.2.6
     downloads:

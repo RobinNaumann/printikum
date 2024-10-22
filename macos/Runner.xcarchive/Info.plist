@@ -14,18 +14,18 @@
 		<key>CFBundleIdentifier</key>
 		<string>in.robbb.ikumPrint</string>
 		<key>CFBundleShortVersionString</key>
-		<string>0.2.7</string>
+		<string>0.2.8</string>
 		<key>CFBundleVersion</key>
-		<string>5</string>
+		<string>6</string>
 		<key>SigningIdentity</key>
-		<string>Apple Development: constorux@gmail.com (C946PBYPD4)</string>
+		<string>Apple Development: ro_nau11@gmx.de (UL38UMM9R5)</string>
 		<key>Team</key>
-		<string>J65M9HARFN</string>
+		<string>G7HRUA63GN</string>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2024-06-22T06:22:14Z</date>
+	<date>2024-10-22T12:59:38Z</date>
 	<key>Name</key>
 	<string>Runner</string>
 	<key>SchemeName</key>

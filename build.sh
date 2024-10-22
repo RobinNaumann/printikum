@@ -7,6 +7,7 @@ cp ./build/app/outputs/flutter-apk/app-release.apk ./dist/printikum.apk
 cd ./macos
 echo "\x1b[34;1mmacOS: 1/3: Flutter build...\x1b[0m"
 flutter build macos
+cd ..
 
 echo "\x1b[34;1mmacOS: 2/3: XCode build...\x1b[0m"
 cd ./macos
