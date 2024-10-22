@@ -4,7 +4,7 @@ binary-path:     '/Users/robin/Library/Developer/Xcode/DerivedData/Runner-fwojwv
 relocations:
   - { offsetInCU: 0x34, offset: 0xC6256, size: 0x8, addend: 0x0, symName: _url_launcher_macosVersionString, symObjAddr: 0x0, symBinAddr: 0x6A80, symSize: 0x0 }
   - { offsetInCU: 0x69, offset: 0xC628B, size: 0x8, addend: 0x0, symName: _url_launcher_macosVersionNumber, symObjAddr: 0x30, symBinAddr: 0x6AB0, symSize: 0x0 }
-  - { offsetInCU: 0x4F, offset: 0xC62F0, size: 0x8, addend: 0x0, symName: '_$s18url_launcher_macos19UrlLauncherApiCodecC6sharedACvpZ', symObjAddr: 0xB138, symBinAddr: 0xD368, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0xC62F0, size: 0x8, addend: 0x0, symName: '_$s18url_launcher_macos19UrlLauncherApiCodecC6sharedACvpZ', symObjAddr: 0xB140, symBinAddr: 0xD368, symSize: 0x0 }
   - { offsetInCU: 0xA4, offset: 0xC6345, size: 0x8, addend: 0x0, symName: '_$s18url_launcher_macos9wrapError33_80C8BD44AAE3876D41A9EF9D799DC718LLySayypSgGypF', symObjAddr: 0x0, symBinAddr: 0x2740, symSize: 0x2A8 }
   - { offsetInCU: 0x1E6, offset: 0xC6487, size: 0x8, addend: 0x0, symName: '_$s18url_launcher_macos10nilOrValue33_80C8BD44AAE3876D41A9EF9D799DC718LLyxSgypSglFSi_Tg5', symObjAddr: 0x2A8, symBinAddr: 0x29E8, symSize: 0xFC }
   - { offsetInCU: 0x235, offset: 0xC64D6, size: 0x8, addend: 0x0, symName: '_$s18url_launcher_macos16UrlLauncherErrorOSYAASY8rawValuexSg03RawH0Qz_tcfCTW', symObjAddr: 0x44C, symBinAddr: 0x2B8C, symSize: 0x14 }

@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		v4pg40rZS5oxqVrrrVSeguTbGec=
+		2HnHllAPsWmcwoJP8C7v+/w0KxQ=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<data>
@@ -23,7 +23,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			0tYAvxtzmkaB52xJgMPK1GbwNJQ=
+			nJSxpovDhvFnH7H1fG1UacctAW0=
 			</data>
 			<key>requirement</key>
 			<string>identifier "io.flutter.flutter.app" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: constorux@gmail.com (C946PBYPD4)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -41,7 +41,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			1xdwbjNp6m3pic5GJq7ngrDrtR4=
+			9f9yreUUmCewtBO9O9cKDhZbrjQ=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.desktop-window" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: constorux@gmail.com (C946PBYPD4)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			O8eNRxEp+sP+slUqPiv8YE7olfA=
+			N9mOJMYXLnvBjR4m2aquBikAFWI=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.device-info-plus" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: constorux@gmail.com (C946PBYPD4)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -212,7 +212,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			14YWN/ryxem63IfVdy8huE1jTR0=
+			L9+SIUN2J0mqBETqQF9vFmf4bjk=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.package-info-plus" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: constorux@gmail.com (C946PBYPD4)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -221,7 +221,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			nzv/20oEr+ckJoaw9O3dvQrmSIk=
+			+demv3TAlbVtMLFSj09QV5finaU=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.url-launcher-macos" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: constorux@gmail.com (C946PBYPD4)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -237,7 +237,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LRvLGT2O3B7Y/M0uadbVk7YT5iA9v+C60XD+vm2C7Vk=
+			4r8IVM3sW4oR2Eq18lYqwj9YqIwVdBgydNM+wzUPHR8=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib</key>

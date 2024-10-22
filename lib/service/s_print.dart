@@ -182,7 +182,7 @@ class PrinterService {
   }
 
   Future<String> _curl(AuthUser user, String url) =>
-      _exec(user, 'curl -u ${user.username}:${user.password} $url');
+      _exec(user, 'curl -k -u ${user.username}:${user.password} $url');
 }
 
 

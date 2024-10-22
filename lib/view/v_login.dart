@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
             title: "printikum",
             children: [
               Text.bodyS(
-                "an open source, no setup tool to print files at the computer science campus at the university of Hamburg",
+                "an open source, no setup tool to print files at the computer science campus at the University of Hamburg",
               ),
               TextFormField(
                 onChanged: (v) => setState(() => inUsername = v),
