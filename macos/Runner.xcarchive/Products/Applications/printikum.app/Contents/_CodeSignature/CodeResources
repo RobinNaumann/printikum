@@ -23,7 +23,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			/rdpJ+rqk3khuYKDTFBB8OjnBPg=
+			GAe7LGfTeKVP/aTvKdwKqwj5jqs=
 			</data>
 			<key>requirement</key>
 			<string>identifier "io.flutter.flutter.app" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: ro_nau11@gmx.de (UL38UMM9R5)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>

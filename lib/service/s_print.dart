@@ -8,6 +8,7 @@ import 'package:html/parser.dart' as html;
 import 'package:moewe/moewe.dart';
 import 'package:printikum/config.dart';
 import 'package:printikum/main.dart';
+import 'package:printikum/service/s_print_demo.dart';
 
 /*extension SimpleElement on Element {
   String? get text => innerHtml?.trim();
@@ -94,10 +95,20 @@ class RichPrinterData extends DataModel {
   }
 }
 
-class PrinterService {
-  static PrinterService i = PrinterService._();
-  PrinterService._();
+abstract class PrinterService {
+  static PrinterService i = RealPrinterService();
 
+  Future<void> login(AuthUser user);
+  Future<void> printFile(AuthUser user, String printer, String path);
+  Future<UserInfo> info(AuthUser user);
+  Future<List<Printer>> list(AuthUser user);
+
+  void init(bool demo) {
+    i = demo ? DemoPrintService() : RealPrinterService();
+  }
+}
+
+class RealPrinterService extends PrinterService {
   Future<void> login(AuthUser user) async {
     const msg = "printikum";
     final p = await _exec(user, 'echo $msg');
@@ -184,6 +195,8 @@ class PrinterService {
   Future<String> _curl(AuthUser user, String url) =>
       _exec(user, 'curl -k -u ${user.username}:${user.password} $url');
 }
+
+
 
 
 

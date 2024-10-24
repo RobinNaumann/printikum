@@ -24,6 +24,8 @@ class _LoginPageState extends State<LoginPage> {
     try {
       setState(() => state = "loading");
       final auth = AuthUser(inUsername, inPassword);
+
+      PrinterService.i.init(inUsername == "demo");
       await PrinterService.i.login(auth);
       log.d(this, "logged in");
       c.bit<ConfigBit>().setUser(auth);

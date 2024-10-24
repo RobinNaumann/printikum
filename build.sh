@@ -1,8 +1,16 @@
 echo "\x1b[34;1mbuilding app for Android, macOS\x1b[0m"
+echo "\x1b[34;cleaning output...\x1b[0m"
+rm -rf ./dist
+mkdir ./dist
 
 echo "\x1b[34;1mAndroid: Flutter build (apk)...\x1b[0m"
-flutter build apk
+flutter build apk --release
 cp ./build/app/outputs/flutter-apk/app-release.apk ./dist/printikum.apk
+
+echo "\x1b[34;1mAndroid: Flutter build (appbundle)...\x1b[0m"
+flutter build appbundle --release
+cp ./build/app/outputs/bundle/release/app-release.aab ./dist/printikum.aab
+
 
 cd ./macos
 echo "\x1b[34;1mmacOS: 1/3: Flutter build...\x1b[0m"

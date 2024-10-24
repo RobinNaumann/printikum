@@ -45,3 +45,6 @@ app.*.map.json
 
 /dist
 /macos/Runner.xcarchive
+
+# signing
+/android/sign
