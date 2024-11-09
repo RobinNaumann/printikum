@@ -15,25 +15,25 @@ tagline: no-setup printing utility for the ikum
 about: |
   printikum is a no-setup printing utility for the ikum. It allows you to print documents from your device to the printers at the ikum without joining specific networks or installing drivers. 
   If you have any questions or feedback, feel free to contact me via email (robin.naumann@studium...) or on GitHub.
-icon: https://raw.githubusercontent.com/RobinNaumann/printikum/main/icon.png
+icon: https://raw.githubusercontent.com/RobinNaumann/printikum/main/assets/icon.png
 source: https://github.com/RobinNaumann/printikum
 donate: https://www.buymeacoffee.com/robinnaumann
 screenshots:
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc1.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc2.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc3.png
-  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/screenshot/sc4.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/assets/screenshots/macos/sc1.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/assets/screenshots/macos/sc2.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/assets/screenshots/macos/sc3.png
+  - https://raw.githubusercontent.com/RobinNaumann/printikum/main/assets/screenshots/macos/sc4.png
 releases:
-  - version: 0.2.8
+  - version: latest
     downloads:
       - platform: Android
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-android.apk
+        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum-android.apk
       - platform: macOS
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum.app.zip
+        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum.app.zip
       - platform: Windows
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-windows.zip
+        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum-windows.zip
       - platform: Linux
-        url: https://github.com/RobinNaumann/printikum/releases/download/v0.2.8/printikum-linux.zip
+        url: https://github.com/RobinNaumann/printikum/releases/latest/download/printikum-linux.zip
 
   - version: 0.2.6
     downloads:

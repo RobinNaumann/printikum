@@ -23,7 +23,7 @@ void main() async {
   ).init();
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    await DesktopWindow.setWindowSize(Size(430, 500));
+    await DesktopWindow.setWindowSize(Size(430, 560));
   }
 
   moewe.events.appOpen();

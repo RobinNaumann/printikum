@@ -7,6 +7,20 @@ import 'package:printikum/service/s_print.dart';
 import 'package:printikum/view/v_home.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+LeadingIcon feedbackBtn() => LeadingIcon(
+    icon: Icons.messagesSquare,
+    onTap: (c) => MoeweFeedbackPage.show(
+          c,
+          labels: FeedbackLabels(
+              header: "send feedback",
+              description:
+                  "Hey ☺️ Thanks for using printikum!\nIf you have any feedback, questions or suggestions, please let me know. I'm always happy to hear from you.",
+              contactDescription:
+                  "if you want me to respond to you, please provide your email address or social media handle",
+              contactHint: "contact info (optional)"),
+          theme: MoeweTheme(darkTheme: c.theme.color.mode == ColorModes.dark),
+        ));
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -36,6 +50,50 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
+  Widget _loginSection() {
+    return Column(
+      children: [
+        Text.bodyS(
+          "an open source, no setup tool to print files at the computer science campus at the University of Hamburg",
+        ),
+        TextFormField(
+          onChanged: (v) => setState(() => inUsername = v),
+          autofocus: true,
+          decoration: const InputDecoration(
+              hintText: "username (3mustermann)",
+              border: InputBorder.none,
+              hintMaxLines: 1),
+        ),
+        TextFormField(
+          onChanged: (v) => setState(() => inPassword = v),
+          autofocus: true,
+          obscureText: true,
+          decoration: const InputDecoration(
+              hintText: "password", border: InputBorder.none, hintMaxLines: 1),
+        ),
+        Button.major(
+            label: state == "loading" ? "loading..." : "login",
+            onTap:
+                state == "loading" || inUsername.isEmpty || inPassword.isEmpty
+                    ? null
+                    : () => login(context)),
+        Text.bodyS(
+          "your credentials are only sent to the servers\nmanaged by the university",
+          textAlign: TextAlign.center,
+        ),
+        if (state == "error")
+          Card(
+              margin: const RemInsets(top: 1),
+              style: ColorStyles.minorAlertError,
+              child: Row(
+                  children: [
+                const Icon(Icons.alertTriangle),
+                Text.bodyS("login failed")
+              ].spaced()))
+      ].spaced(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -44,53 +102,20 @@ class _LoginPageState extends State<LoginPage> {
         const _NewVersionBar(),
         Expanded(
           child: Scaffold(
-            actions: [ThemeToggleBtn()],
-            title: "printikum",
-            children: [
-              Text.bodyS(
-                "an open source, no setup tool to print files at the computer science campus at the University of Hamburg",
-              ),
-              TextFormField(
-                onChanged: (v) => setState(() => inUsername = v),
-                autofocus: true,
-                decoration: const InputDecoration(
-                    hintText: "username (3mustermann)",
-                    border: InputBorder.none,
-                    hintMaxLines: 1),
-              ),
-              TextFormField(
-                onChanged: (v) => setState(() => inPassword = v),
-                autofocus: true,
-                obscureText: true,
-                decoration: const InputDecoration(
-                    hintText: "password",
-                    border: InputBorder.none,
-                    hintMaxLines: 1),
-              ),
-              Button.major(
-                  label: state == "loading" ? "loading..." : "login",
-                  onTap: state == "loading" ||
-                          inUsername.isEmpty ||
-                          inPassword.isEmpty
-                      ? null
-                      : () => login(context)),
-              Text.bodyS(
-                "your credentials are only sent to the servers\nmanaged by the university",
-                textAlign: TextAlign.center,
-              ),
-              if (state == "error")
-                Card(
-                    margin: const RemInsets(top: 1),
-                    style: ColorStyles.minorAlertError,
-                    child: Row(
-                        children: [
-                      const Icon(Icons.alertTriangle),
-                      Text.bodyS("login failed")
-                    ].spaced())),
-              Spaced(),
-              AboutSection()
-            ].spaced(),
-          ),
+              leadingIcon: feedbackBtn(),
+              actions: [ThemeToggleBtn()],
+              title: "printikum",
+              child: Padded.all(
+                child: Column(
+                  children: [
+                    Expanded(
+                        child: SingleChildScrollView(
+                            physics: ClampingScrollPhysics(),
+                            child: _loginSection())),
+                    AboutSection()
+                  ].spaced(),
+                ),
+              )),
         ),
       ],
     );
@@ -146,26 +171,29 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        children: [
-      Row(children: [
-        Expanded(
-            child: Button.action(
-                icon: Icons.globe,
-                label: "about",
-                onTap: () {
-                  launchUrlString(appConfig.about.homepage);
-                })),
-        Expanded(
-            child: Button.action(
-                icon: Icons.github,
-                label: "source",
-                onTap: () {
-                  launchUrlString(appConfig.about.source);
-                })),
-      ]),
-      Text.bodyS("v${moewe.appVersion} by ${appConfig.about.author}",
-          color: Colors.grey)
-    ].spaced());
+    return Padded.only(
+      bottom: 1,
+      child: Column(
+          children: [
+        Row(children: [
+          Expanded(
+              child: Button.action(
+                  icon: Icons.globe,
+                  label: "about",
+                  onTap: () {
+                    launchUrlString(appConfig.about.homepage);
+                  })),
+          Expanded(
+              child: Button.action(
+                  icon: Icons.github,
+                  label: "source",
+                  onTap: () {
+                    launchUrlString(appConfig.about.source);
+                  })),
+        ]),
+        Text.bodyS("v${moewe.appVersion} by ${appConfig.about.author}",
+            color: Colors.grey)
+      ].spaced()),
+    );
   }
 }

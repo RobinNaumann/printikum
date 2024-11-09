@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:elbe/elbe.dart';
 import 'package:moewe/moewe.dart';
 import 'package:printikum/bit/b_config.dart';
@@ -56,6 +58,7 @@ class HomePage extends StatelessWidget {
                 key: anyKey(config.reloadCount),
                 create: (_) => UserInfoBit(user: config.user!),
                 child: Scaffold(
+                    leadingIcon: feedbackBtn(),
                     title: "printikum",
                     actions: [
                       IconButton.integrated(
@@ -112,27 +115,30 @@ class _PrintBtnState extends State<PrintBtn> {
 
   @override
   Widget build(BuildContext context) {
-    return ConfigBit.builder(
-        onData: (bit, config) => AnimatedSize(
-            duration: Duration(milliseconds: 300),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Button.major(
-                      icon: Icons.printer,
-                      label: msg == null ? "sending..." : "print",
-                      onTap: msg == null ||
-                              config.printer == null ||
-                              config.file == null
-                          ? null
-                          : () => sendFile(config)),
-                  if (msg?.isNotEmpty ?? false)
-                    Padded.only(
-                        top: 1,
-                        child: Text.bodyS(msg!,
-                            variant: TypeVariants.bold,
-                            textAlign: TextAlign.center))
-                ])));
+    return Padded.only(
+      bottom: Platform.isIOS ? 2 : 0,
+      child: ConfigBit.builder(
+          onData: (bit, config) => AnimatedSize(
+              duration: Duration(milliseconds: 300),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Button.major(
+                        icon: Icons.printer,
+                        label: msg == null ? "sending..." : "print",
+                        onTap: msg == null ||
+                                config.printer == null ||
+                                config.file == null
+                            ? null
+                            : () => sendFile(config)),
+                    if (msg?.isNotEmpty ?? false)
+                      Padded.only(
+                          top: 1,
+                          child: Text.bodyS(msg!,
+                              variant: TypeVariants.bold,
+                              textAlign: TextAlign.center))
+                  ]))),
+    );
   }
 }
 

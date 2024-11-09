@@ -1,32 +1,24 @@
-echo "\x1b[34;1mbuilding app for Android, macOS\x1b[0m"
+# config:
+label="printikum"
+package="in.robbb.$label"
+
+# script:
+
+set -e # exit on error
+clear
+
+echo "\x1b[32;1mRunnin Plugins\x1b[0m"
+flutter pub get
+dart run flutter_launcher_icons
+dart run change_app_package_name:main $package
+
 echo "\x1b[34;cleaning output...\x1b[0m"
 rm -rf ./dist
 mkdir ./dist
+echo "\x1b[34;1mbuilding app for Android, macOS\x1b[0m"
 
-echo "\x1b[34;1mAndroid: Flutter build (apk)...\x1b[0m"
-flutter build apk --release
-cp ./build/app/outputs/flutter-apk/app-release.apk ./dist/printikum.apk
-
-echo "\x1b[34;1mAndroid: Flutter build (appbundle)...\x1b[0m"
-flutter build appbundle --release
-cp ./build/app/outputs/bundle/release/app-release.aab ./dist/printikum.aab
-
-
-cd ./macos
-echo "\x1b[34;1mmacOS: 1/3: Flutter build...\x1b[0m"
-flutter build macos
-cd ..
-
-echo "\x1b[34;1mmacOS: 2/3: XCode build...\x1b[0m"
-cd ./macos
-xcodebuild -quiet -workspace Runner.xcworkspace -scheme Runner archive -archivePath "Runner.xcarchive"
-
-echo "\x1b[34;1mmacOS: 3/3: packaging to ./dist ...\x1b[0m"
-xcodebuild \
-  -archivePath Runner.xcarchive \
-  -exportArchive -exportPath '../dist'\
-  -exportOptionsPlist exportOptions.plist
-cd ..
+./scripts/build_android.sh $label 
+./scripts/build_macos.sh $label
 
 echo "\x1b[32;1mDone! opening dist directory\x1b[0m"
 open ./dist
