@@ -1,35 +1,30 @@
-# printikum
+# printikum *<img src="./icon.png" width="40" align="right"/>* 
+a simple, cross platform utility for printing at the Informatikum at the University of Hamburg
 
-a simple utility for printing at the ikum in Hamburg
+You can learn more about it on my personal website [here](https://apps.robbb.in/printikum).
 
-## Features
+### Features
 - User-friendly interface for easy document selection and printing
 - Support for various file formats, including PDF, and images
 - view your current quota balance
 - works from any network
 
-## Screenshots
-![](./screenshot/screenshot_1.png)
-![](./screenshot/screenshot_2.png)
-![](./screenshot/screenshot_3.png)
-![](./screenshot/screenshot_4.png)
+### Screenshots
+*<img src="./screenshot/sc4.png" width="350" />*&nbsp;&nbsp;
+*<img src="./screenshot/sc2.png" width="350" />*
 
-## Installation
-- download the app for your platform [here](https://apps.robbb.in/printikum) 
+### Install
+The App is available for: Android, macOS, Windows, Linux
+- download it **[here](https://apps.robbb.in/printikum)**
 
-#### building
-- **macOS**
-    1. `flutter build macos`
-    2. `open macos/Runner.xcworkspace`
-    3. set signing to `development`
-    4. select `Product` > `Archive`
-
-## Contributing
+### Contribute
 Contributions are welcome! If you'd like to contribute to printikum (or have an idea), just send me a message
 
-## License
+### License
 This project is licensed under the [MIT License](LICENSE).
 
-## Contact
+### Contact
 For any inquiries or support, please send me a message or an email
+
+I wish you a great day<br>
 Yours, Robin
