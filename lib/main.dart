@@ -15,11 +15,11 @@ void main() async {
 
   // setup Moewe for crash logging
   await Moewe(
-    host: "moewe.robbb.in",
+    host: "open.moewe.app",
     project: "dfdd2bd2f290bd2c",
     app: "24522f9264034f4d",
-    appVersion: packageInfo?.version ?? "0.0.0",
-    buildNumber: int.tryParse(packageInfo?.buildNumber ?? "0") ?? 0,
+    appVersion: packageInfo?.version,
+    buildNumber: int.tryParse(packageInfo?.buildNumber ?? "0"),
   ).init();
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
